@@ -35,12 +35,13 @@ export default function ProjectCard({ projectType, title, image, link }) {
         className="cursor-pointer xl:relative"
         onMouseEnter={handleHover}
         onMouseLeave={handleHoverOut}
+        onClick={handleClick}
       >
         <img
           src={image}
           alt={title}
           className="object-fit w-full h-full"
-          onClick={handleClick}
+          
         />
         {showBackdrop && (
           <div className="absolute inset-0 flex justify-center items-center bg-black opacity-50 transition-opacity duration-300 rounded-lg">
