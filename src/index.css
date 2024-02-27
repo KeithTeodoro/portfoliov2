@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homeContent {
+  background-image: url("./assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.imgContainer img {
+  width: 50px;
+
+  height: 50px;
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.fade-out {
+  animation: fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.active {
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 4px;
+  background-image: linear-gradient(to right, #6a84df, #6f63ff, #4759ff);
+  z-index: -1;
+}
